@@ -50,6 +50,7 @@ const HostingDetailPage  = lazy(() => import('./pages/HostingDetailPage'))
 const IndustryPage       = lazy(() => import('./pages/IndustryPage'))
 const MediaPage          = lazy(() => import('./pages/MediaPage'))
 const ClientPortalPage   = lazy(() => import('./pages/ClientPortalPage'))
+const SupportPage        = lazy(() => import('./pages/SupportPage'))
 const ThankYouPage       = lazy(() => import('./pages/ThankYouPage'))
 
 function ScrollToTop() {
@@ -80,6 +81,7 @@ function PageRoutes() {
           <Route path="/ai-systems" element={<AISystemsPage />} />
           <Route path="/media" element={<MediaPage />} />
           <Route path="/client-portal" element={<ClientPortalPage />} />
+          <Route path="/support" element={<SupportPage />} />
           <Route path="/platforms/:slug" element={<PlatformDetailPage />} />
           <Route path="/ecosystem/:vertical" element={<IndustryPage />} />
           <Route path="/services/:slug" element={<ServiceDetailPage />} />
