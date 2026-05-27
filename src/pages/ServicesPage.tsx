@@ -36,7 +36,7 @@ const ecosystems = [
     title: 'Identity & Communications',
     accent: '#b8882a',
     accentVar: 'var(--color-hps-gold-rich)',
-    href: '/services',
+    href: '/services/identity-communications',
     services: [
       { label: 'Identity & Visual Systems',       href: '/services/brand-identity' },
       { label: 'Marketing & Print Design',        href: '/services/print-design' },

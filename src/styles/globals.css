@@ -139,45 +139,23 @@ h1, h2, h3, h4, h5 {
   border-color: var(--color-hps-smoke);
 }
 
-/* ── Scroll Reveal (safe pattern) ───────────────────────
-   Default state: always visible.
-   body.can-animate is only added by JS once the observer is
-   set up and above-fold elements are pre-marked .is-visible.
-   If JS never runs → body never gets can-animate → nothing hidden.
-   Safety timeout adds .is-visible to everything after 1200ms.
+/* ── Version 1A: Reveal Kill Switch ─────────────────────
+   All reveal/animation attributes forced visible.
+   No IntersectionObserver, no body.can-animate, no hiding.
 ──────────────────────────────────────────────────────── */
-
-/* .reveal-item: visible by default, no opacity:0 here */
-.reveal-item { }
-
-/* Only hidden when JS is running and element not yet in view */
-body.can-animate [data-reveal]:not(.is-visible),
-body.can-animate .reveal-item:not(.is-visible) {
-  opacity: 0;
-  transform: translateY(16px);
-  transition:
-    opacity 0.75s cubic-bezier(0.16, 1, 0.3, 1),
-    transform 0.75s cubic-bezier(0.16, 1, 0.3, 1);
-}
-
-/* Revealed state */
-[data-reveal].is-visible,
-.reveal-item.is-visible {
+[data-reveal],
+[data-reveal-left],
+[data-reveal-delay],
+.reveal-item,
+.reveal,
+.reveal-child,
+.motion-reveal {
   opacity: 1 !important;
+  visibility: visible !important;
   transform: none !important;
+  transition: none !important;
+  animation: none !important;
 }
-
-/* Delay variants (only apply when hidden) */
-body.can-animate [data-reveal-delay="60"]:not(.is-visible)  { transition-delay: 60ms; }
-body.can-animate [data-reveal-delay="80"]:not(.is-visible)  { transition-delay: 80ms; }
-body.can-animate [data-reveal-delay="160"]:not(.is-visible) { transition-delay: 160ms; }
-body.can-animate [data-reveal-delay="240"]:not(.is-visible) { transition-delay: 240ms; }
-body.can-animate [data-reveal-delay="320"]:not(.is-visible) { transition-delay: 320ms; }
-body.can-animate [data-reveal-delay="400"]:not(.is-visible) { transition-delay: 400ms; }
-
-/* Side-entry variant */
-body.can-animate [data-reveal-left]:not(.is-visible) { transform: translateX(-20px); }
-[data-reveal-left].is-visible { transform: none !important; }
 
 /* ── Navigation ──────────────────────────────────────── */
 
@@ -313,13 +291,6 @@ body.can-animate [data-reveal-left]:not(.is-visible) { transform: translateX(-20
     animation-iteration-count: 1 !important;
     transition-duration: 0.01ms !important;
     scroll-behavior: auto !important;
-  }
-  body.can-animate [data-reveal]:not(.is-visible),
-  body.can-animate .reveal-item:not(.is-visible),
-  body.can-animate [data-reveal-left]:not(.is-visible) {
-    opacity: 1 !important;
-    transform: none !important;
-    transition: none !important;
   }
   /* Page-enter animation: skip transform, fade only */
   .page-enter {
