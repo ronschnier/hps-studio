@@ -61,6 +61,62 @@ function ScrollToTop() {
   return null
 }
 
+function SafeScrollReveal() {
+  const { pathname } = useLocation()
+  useEffect(() => {
+    // Reduced motion: never hide anything
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return
+
+    const elements = Array.from(
+      document.querySelectorAll<Element>('[data-reveal], .reveal-item')
+    )
+    if (!elements.length) return
+
+    // Safety net: reveal everything after 1200ms regardless
+    const safetyTimer = setTimeout(() => {
+      elements.forEach(el => el.classList.add('is-visible'))
+    }, 1200)
+
+    const initTimer = setTimeout(() => {
+      // Pre-mark elements already in the viewport BEFORE adding can-animate
+      // This prevents any above-fold flash
+      elements.forEach(el => {
+        const rect = el.getBoundingClientRect()
+        if (rect.top < window.innerHeight && rect.bottom > 0) {
+          el.classList.add('is-visible')
+        }
+      })
+
+      // Safe to gate now — above-fold items are already visible
+      document.body.classList.add('can-animate')
+
+      const observer = new IntersectionObserver(
+        entries => entries.forEach(e => {
+          if (e.isIntersecting) {
+            e.target.classList.add('is-visible')
+            observer.unobserve(e.target)
+          }
+        }),
+        { rootMargin: '0px 0px -4% 0px', threshold: 0.08 }
+      )
+
+      elements.forEach(el => {
+        if (!el.classList.contains('is-visible')) observer.observe(el)
+      })
+
+      return () => observer.disconnect()
+    }, 60)
+
+    return () => {
+      clearTimeout(safetyTimer)
+      clearTimeout(initTimer)
+      document.body.classList.remove('can-animate')
+      elements.forEach(el => el.classList.remove('is-visible'))
+    }
+  }, [pathname])
+  return null
+}
+
 
 function PageRoutes() {
   const { pathname } = useLocation()
@@ -100,6 +156,7 @@ export default function App() {
   return (
     <BrowserRouter>
       <ScrollToTop />
+      <SafeScrollReveal />
       <a href="#main-content" className="skip-link">Skip to main content</a>
       <Navigation />
       <main id="main-content" tabIndex={-1}>
