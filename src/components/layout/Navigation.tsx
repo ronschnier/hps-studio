@@ -26,7 +26,7 @@ const freeToolsNav = [
 
 const clientSystemsNav = [
   { label: 'Client Portal',         href: '/client-portal' },
-  { label: 'Support & Project Access', href: '/client-portal' },
+  { label: 'Support & Project Access', href: '/support' },
 ]
 
 const allMobileNav = [
