@@ -159,13 +159,13 @@ h1, h2, h3, h4, h5 {
 
 /* ── Navigation ──────────────────────────────────────── */
 
-/* Dark cinematic glass — transparent over hero, no cream tones */
+/* Transparent over hero, warm cream on scroll/interior */
 .nav-base,
 .hps-top-nav {
-  background: rgba(7, 10, 18, 0.18);
+  background: transparent;
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(255, 205, 92, 0.10);
+  border-bottom: 1px solid transparent;
   transition:
     background .4s,
     border-color .4s,
@@ -174,11 +174,11 @@ h1, h2, h3, h4, h5 {
     -webkit-backdrop-filter .4s;
 }
 .nav-active {
-  background: rgba(7, 10, 18, 0.34);
+  background: rgba(248, 242, 232, 0.86);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom-color: rgba(255, 205, 92, 0.16);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
+  border-bottom-color: rgba(200, 180, 154, 0.35);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
 }
 
 /* Logo: always full color — subtle shadow helps white paths read on cream */

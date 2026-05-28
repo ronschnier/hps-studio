@@ -48,9 +48,8 @@ const allMobileNav = [
   { label: 'Contact',                 href: '/contact' },
 ]
 
-// Token aliases for the two nav states
+// Token aliases — light text on hero, dark text on scrolled cream nav
 const T = {
-  // link text colors
   linkIdle:    (active: boolean) => active ? 'rgba(74,63,52,0.85)'   : 'rgba(244,234,212,0.80)',
   linkHover:   (active: boolean) => active ? '#0c1420'               : '#ffffff',
   linkCurrent: (active: boolean) => active ? '#478c5c'               : '#e8b84b',
@@ -151,9 +150,7 @@ export default function Navigation() {
               <span
                 className="nav-geo-tooltip absolute top-full left-0 mt-3 px-3 py-1.5 rounded whitespace-nowrap z-50"
                 style={{
-                  background: navActive
-                    ? 'rgba(16,32,64,0.88)'
-                    : 'rgba(16,32,64,0.82)',
+                  background: 'rgba(16,32,64,0.88)',
                   border: '1px solid rgba(30,53,80,0.5)',
                   fontFamily: 'var(--font-mono)',
                   fontSize: '0.62rem',
