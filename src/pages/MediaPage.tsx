@@ -10,7 +10,7 @@ const fbmFeatures = [
   },
   {
     name: 'Free Membership',
-    desc: 'Free accounts unlock streaming, download access with clear production licenses, and platform discovery tools — no credit card, no trial period, no friction.',
+    desc: 'Free accounts unlock streaming, download access with clear production licenses, and platform discovery tools. No credit card, no trial period, no friction.',
   },
   {
     name: 'Paid Membership',
@@ -34,7 +34,7 @@ const fbmFeatures = [
   },
   {
     name: 'Licensing Infrastructure',
-    desc: 'Every track ships with documented license terms. Free downloads, extended commercial rights, and sync licenses with clear terms at each tier — no rights conflicts, no retroactive claims.',
+    desc: 'Every track ships with documented license terms. Free downloads, extended commercial rights, and sync licenses with clear terms at each tier. No rights conflicts, no retroactive claims.',
   },
   {
     name: 'Subscription Ecosystem',
@@ -55,12 +55,12 @@ const whoItServes = [
   },
   {
     role: 'Creators',
-    desc: 'Find cleared audio for content creation, video production, podcasting, and social media — with license documentation that holds up under Content ID and broadcast review.',
+    desc: 'Find cleared audio for cinematic video production, branded content creation, podcasting, and social media — with license documentation that holds up under Content ID and broadcast review.',
     accent: 'var(--color-hps-teal)',
   },
   {
     role: 'Brands & Studios',
-    desc: 'Use music and media systems as part of campaign launches, brand activations, and creative production ecosystems. Commercial tier available for production houses and agencies.',
+    desc: 'Use music and media systems as part of cinematic campaign launches, immersive brand activations, and editorial production ecosystems. Commercial tier available for production houses and agencies.',
     accent: 'var(--color-hps-teal-dark)',
   },
 ]
@@ -85,7 +85,7 @@ const mediaStudioLinks = [
 
 const ecosystemCards = [
   { label: 'HPS Creator Hub',    href: '/platforms/hps-creator-hub',  rel: 'Creator operations infrastructure', accent: 'var(--color-hps-coral-warm)' },
-  { label: 'HPS Media Studio',   href: '/platforms/hps-media-studio', rel: 'Content production and asset workflow', accent: 'var(--color-hps-teal)' },
+  { label: 'HPS Media Studio',   href: '/platforms/hps-media-studio', rel: 'Cinematic content production and asset workflow', accent: 'var(--color-hps-teal)' },
   { label: 'HPS Socialize',      href: '/platforms/hps-socialize',    rel: 'Multi-channel social scheduling', accent: 'var(--color-hps-teal-dark)' },
   { label: 'HPS BioLinks',       href: '/platforms/hps-biolinks',     rel: 'Branded link hub and analytics', accent: 'var(--color-hps-green)' },
   { label: 'HPS Push',           href: '/platforms/hps-push',         rel: 'Web push subscriber channel', accent: 'var(--color-hps-gold-rich)' },
@@ -127,7 +127,7 @@ export default function MediaPage() {
               className="font-display mb-6"
               style={{ fontSize: 'clamp(2rem, 4.5vw, 3.5rem)', color: 'var(--color-hps-ink)', lineHeight: 1.03 }}
             >
-              Music, creators, streaming, and media infrastructure.
+              Music, cinematic production, creator systems, and media infrastructure.
             </h1>
             <p
               data-reveal
@@ -143,7 +143,7 @@ export default function MediaPage() {
               className="font-body leading-relaxed"
               style={{ fontSize: '1rem', color: 'var(--color-hps-smoke)', maxWidth: '40rem', opacity: 0.85 }}
             >
-              Backed by the HPS Media Studio infrastructure, Creator Hub, and the full HPS operational ecosystem. A platform property, not a side project.
+              Backed by HPS Media Studio cinematic production infrastructure, Creator Hub, and the full HPS operational ecosystem. A platform property, not a side project.
             </p>
           </div>
         </div>
@@ -353,7 +353,7 @@ export default function MediaPage() {
                 className="font-body leading-relaxed mb-4"
                 style={{ fontSize: '1rem', color: 'var(--color-hps-smoke)' }}
               >
-                HPS Media Studio is the operational infrastructure that makes sustained content production possible at scale. Production calendars, organized asset libraries, brand voice documentation, approval workflows, and distribution checklists — so volume output stays on-brand and on-schedule without a full in-house production team.
+                HPS Media Studio is the operational infrastructure that makes sustained cinematic content production possible at scale. Production calendars, campaign planning, organized asset libraries, brand voice documentation, approval workflows, and distribution checklists. Volume output stays on-brand and on-schedule without a full in-house production team.
               </p>
               <p
                 className="font-body leading-relaxed mb-4"

@@ -38,13 +38,14 @@ const ecosystems = [
     accentVar: 'var(--color-hps-gold-rich)',
     href: '/services/identity-communications',
     services: [
-      { label: 'Identity & Visual Systems',       href: '/services/brand-identity' },
-      { label: 'Marketing & Print Design',        href: '/services/print-design' },
-      { label: 'Photography & Videography',       href: '/services/photography-videography' },
-      { label: 'Social & Content Strategy',       href: '/services/content-strategy' },
-      { label: 'Social Media Management',         href: '/services/social-media-management' },
+      { label: 'Identity & Visual Systems',         href: '/services/brand-identity' },
+      { label: 'Marketing & Print Design',          href: '/services/print-design' },
+      { label: 'Photography & Videography',         href: '/services/photography-videography' },
+      { label: 'Cinematic Campaign Systems',        href: '/services/photography-videography' },
+      { label: 'Social & Content Strategy',         href: '/services/content-strategy' },
+      { label: 'AI-Assisted Creative Workflows',    href: '/ai-systems' },
     ] as ServiceItem[],
-    tone: 'Unified visual storytelling and brand ecosystems.',
+    tone: 'Cinematic storytelling, visual identity, and immersive brand production.',
   },
   {
     id: 'fabrication',
@@ -77,7 +78,7 @@ const ecosystems = [
       { label: 'QR Systems Design & Production',  href: '/services/qr-systems' },
       { label: 'AI Systems Integration',          href: '/ai-systems' },
     ] as ServiceItem[],
-    tone: 'Interactive environments and connected customer experiences.',
+    tone: 'Immersive environments, connected surfaces, and digital brand experiences.',
   },
 ]
 
@@ -85,19 +86,19 @@ const workflowSteps = [
   {
     n: '01',
     label: 'Design',
-    desc: 'Identity, UX, strategy, and system architecture — before a single line of code or cut of material.',
+    desc: 'Identity, UX, strategy, and system architecture. All defined before a single line of code or cut of material.',
     accent: '#0d9488',
   },
   {
     n: '02',
     label: 'Build',
-    desc: 'Code, fabrication, content, and production — all in-house, no translation loss between teams.',
+    desc: 'Code, fabrication, cinematic content, and AI-assisted workflows. All in-house, no translation loss between teams.',
     accent: '#b8882a',
   },
   {
     n: '03',
     label: 'Connect',
-    desc: 'QR systems, hosting, platforms, and physical surfaces — linked into one operational system.',
+    desc: 'QR systems, hosting, platforms, and physical surfaces, all linked into one operational system.',
     accent: '#f87239',
   },
   {
@@ -406,7 +407,7 @@ export default function ServicesPage() {
       <PageHeader
         eyebrow="Operational Capabilities"
         title="Built for Real Operational Systems."
-        description="Happy Path Studios combines software, branding, fabrication, and connected digital experiences into one unified ecosystem."
+        description="Happy Path Studios combines software, branding, fabrication, and connected digital experiences into one unified ecosystem. We work with businesses of all sizes — from a local restaurant needing a first website to a growing operation building full infrastructure."
         accentColor="var(--color-hps-green)"
       />
 
@@ -463,7 +464,7 @@ export default function ServicesPage() {
               className="font-body text-hps-smoke leading-relaxed mt-4 max-w-lg"
               style={{ fontSize: '0.9375rem' }}
             >
-              19 production capabilities, all in-house, Leesburg, Florida. Each one its own discipline. Each one available without minimum orders or outsourcing.
+              19 production capabilities, all in-house, Leesburg, Florida. Golf sponsor plaques, restaurant signage, embroidered shirts, business branding, QR surfaces. Each one available without minimum orders or vendor handoffs.
             </p>
           </div>
 
@@ -729,7 +730,7 @@ export default function ServicesPage() {
               className="font-body text-hps-smoke leading-relaxed"
               style={{ fontSize: '1.0625rem' }}
             >
-              Because every phase is handled by the same team, the result isn't just a deliverable — it's a system that keeps working. Your website talks to your QR menu. Your fabricated sign links to a live digital destination. Your brand kit drives every surface we produce.
+              Because every phase is handled by the same team, the result is a system that keeps working, not just a deliverable. Your website talks to your QR menu. Your fabricated sign links to a live digital destination. Your brand kit drives every surface we produce.
             </p>
             <div className="mt-6">
               <Link
@@ -761,7 +762,7 @@ export default function ServicesPage() {
               Six industry pathways through the HPS ecosystem.
             </h2>
             <p className="font-body max-w-2xl leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)' }}>
-              Every industry cluster uses the same HPS capabilities differently. The pathway view shows which services and platforms are most relevant to your operational context — and how they connect into a coordinated system.
+              Every industry cluster uses the same HPS capabilities differently. The pathway view shows which services and platforms are most relevant to your operational context and how they connect into a coordinated system.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">

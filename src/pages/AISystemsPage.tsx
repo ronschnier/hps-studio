@@ -7,19 +7,19 @@ import { usePageMeta } from '../hooks/usePageMeta'
 const areas = [
   {
     name: 'Workflow Automation',
-    desc: 'Repeatable business processes — order handling, content routing, follow-up sequences, data enrichment, and operational triggers — automated with n8n orchestration so your team executes the exception, not the routine.',
+    desc: 'Repeatable business processes automated with n8n orchestration: order handling, content routing, follow-up sequences, data enrichment, and operational triggers. Your team executes the exception, not the routine.',
     tag: 'Operations',
     accent: 'var(--color-hps-teal-dark)',
   },
   {
     name: 'Content Systems',
-    desc: 'Claude-powered content production pipelines for social media, SEO copy, product descriptions, and marketing assets — aligned to your brand voice and structured so outputs are consistent without constant prompting.',
+    desc: 'Claude-powered content production for social media, SEO copy, product descriptions, campaign assets, and creative briefs — aligned to your brand voice and structured so outputs are consistent without constant prompting.',
     tag: 'Content',
     accent: 'var(--color-hps-gold-rich)',
   },
   {
     name: 'Operational Intelligence',
-    desc: 'Data pipelines and reporting dashboards that pull from your existing tools and surface actionable insights — without requiring a data science team. Know what\'s happening in your operation without manual aggregation.',
+    desc: 'Data pipelines and reporting dashboards that pull from your existing tools and surface actionable insights, without requiring a data science team. Know what\'s happening in your operation without manual aggregation.',
     tag: 'Analytics',
     accent: 'var(--color-hps-green)',
   },
@@ -67,7 +67,7 @@ const implementationSteps = [
   {
     n: '02',
     label: 'System Configuration',
-    desc: 'Build the AI configuration — Claude system prompts, n8n workflow logic, Manus agent specifications, or Olares local deployment — tailored to your actual process, not a template.',
+    desc: 'Build the AI configuration tailored to your actual process, not a template. Claude system prompts, n8n workflow logic, Manus agent specifications, or Olares local deployment depending on what fits.',
   },
   {
     n: '03',
@@ -98,7 +98,7 @@ export default function AISystemsPage() {
       <PageHeader
         eyebrow="Workflow Automation & Intelligence"
         title="AI Systems"
-        description="Claude and n8n-based workflow automation, content systems, and operational data enrichment. Built for real business operations, not AI experiments."
+        description="Claude and n8n-based workflow automation, AI-assisted creative workflows, content systems, and operational intelligence. Built for real business operations, not AI experiments."
         accentColor="var(--color-hps-teal-dark)"
       />
 
@@ -151,7 +151,7 @@ export default function AISystemsPage() {
               The tools we use. Why we use them.
             </h2>
             <p className="font-body max-w-xl leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)' }}>
-              Every tool in the stack was chosen for operational reliability and client extensibility — not because it appeared in a product launch announcement. The goal is systems your team can maintain, extend, and understand.
+              Every tool in the stack was chosen for operational reliability and client extensibility, not because it appeared in a product launch announcement. The goal is systems your team can maintain, extend, and understand.
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 lg:gap-8">
@@ -192,7 +192,7 @@ export default function AISystemsPage() {
                 From workflow audit to running system.
               </h2>
               <p className="font-body leading-relaxed mb-5" style={{ fontSize: '1rem', color: 'var(--color-hps-smoke)' }}>
-                Most AI implementations stall because they start with the tool rather than the workflow. We audit what your team does every week before we touch a single configuration — because the right automation solves a real problem, not a theoretical one.
+                Most AI implementations stall because they start with the tool rather than the workflow. We audit what your team does every week before we touch a single configuration, because the right automation solves a real problem, not a theoretical one.
               </p>
               <p className="font-body leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', opacity: 0.9 }}>
                 Every system we deliver includes full documentation — prompt libraries, workflow schematics, configuration files, and team training materials. Your team can extend the system without coming back to us every time something needs to change.
@@ -236,12 +236,12 @@ export default function AISystemsPage() {
                 The AI landscape is full of demos that look impressive and deployments that nothing depends on. HPS builds the other kind — systems that your team uses every single day, that produce measurable time savings on tasks that were previously done manually, and that keep working after the engagement ends.
               </p>
               <p className="font-body leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', opacity: 0.9 }}>
-                The benchmark isn't "did we add AI?" — it's "how many hours per week does this save, and does it get more useful over time?" If the answer is no, we don't deploy it.
+                The benchmark isn't "did we add AI?" It's "how many hours per week does this save, and does it get more useful over time?" If the answer is no, we don't deploy it.
               </p>
             </div>
             <div data-reveal data-reveal-delay="80" className="flex flex-col gap-4">
               {[
-                { label: 'Content team using Claude to draft', note: 'First-draft social, SEO, and product copy aligned to brand voice — reviewed in minutes, not hours' },
+                { label: 'Content team using Claude to draft', note: 'First-draft social, SEO, product copy, and campaign briefs aligned to brand voice — reviewed in minutes, not hours' },
                 { label: 'n8n routing incoming leads', note: 'Form submissions categorized, tagged, and assigned to the right team member without manual review' },
                 { label: 'Manus running daily data digest', note: 'Morning operational summary delivered to your team from 4 different tools — without logging into each one' },
                 { label: 'Local Olares for client document review', note: 'Healthcare and legal documents processed on-premises — no data leaving the perimeter' },

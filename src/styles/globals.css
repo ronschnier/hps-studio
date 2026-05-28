@@ -159,6 +159,14 @@ h1, h2, h3, h4, h5 {
 
 /* ── Navigation ──────────────────────────────────────── */
 
+/* Explicit glass baseline — applied directly to the nav wrapper for production reliability */
+.hps-top-nav {
+  background: rgba(255, 248, 231, 0.72);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-bottom: 1px solid rgba(207, 160, 71, 0.22);
+}
+
 /* Header: transparent (over hero) → cream glass (scrolled/interior) */
 .nav-base {
   background: rgba(6, 9, 17, 0.06);

@@ -84,10 +84,11 @@ export default function HomePage() {
               data-reveal
               className="font-mono uppercase mb-5"
               style={{
-                fontSize: '0.7rem',
-                letterSpacing: '0.24em',
+                fontSize: '0.68rem',
+                letterSpacing: '0.18em',
                 color: 'var(--color-hps-gold-light)',
                 textShadow: '0 1px 3px rgba(0,0,0,0.4)',
+                whiteSpace: 'nowrap',
               }}
             >
               Central Florida · Fabrication · Platforms · Compliance · AI
@@ -122,7 +123,7 @@ export default function HomePage() {
                 textShadow: '0 1px 3px rgba(0,0,0,0.25)',
               }}
             >
-              Happy Path Studios is an operational systems company, fabrication lab, SaaS ecosystem, accessibility consultancy, and AI infrastructure provider based in Central Florida. We produce real work at every scale, from physical signage to enterprise compliance.
+              Happy Path Studios helps businesses bring ideas to life. From websites and branding to signage, hosting, printing, accessibility, and operational systems, we help businesses of all sizes build, grow, and stay connected.
             </p>
 
             {/* Body copy — block 2 */}
@@ -137,7 +138,7 @@ export default function HomePage() {
                 textShadow: '0 1px 3px rgba(0,0,0,0.22)',
               }}
             >
-              The same team that designs your identity prints your signage, builds your platforms, audits your compliance, and supports your systems long after delivery. No handoffs. No subcontractors. One operational relationship.
+              In software development, the "happy path" means the smooth successful path when everything works the way it should. That idea inspires everything we do: making things easier, clearer, and more connected as your business grows.
             </p>
 
             {/* Buttons */}
@@ -249,12 +250,12 @@ export default function HomePage() {
             </div>
             <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
               {[
-                { label: 'Fabrication Lab',   desc: 'UV printing, laser systems, DTG apparel, embroidery, sublimation, 3D — all produced in-house.',     href: '/fabrication',  accent: 'var(--color-hps-coral-warm)' },
+                { label: 'Fabrication Lab',   desc: 'UV printing, laser systems, DTG apparel, embroidery, sublimation, and 3D printing. All produced in-house.',     href: '/fabrication',  accent: 'var(--color-hps-coral-warm)' },
                 { label: 'Digital Platforms', desc: 'Twenty in-house SaaS tools for marketing, analytics, QR systems, and business operations.',          href: '/platforms',    accent: 'var(--color-hps-teal-dark)' },
                 { label: 'Hospitality & QR',  desc: 'Live digital menus, scan infrastructure, and table operations for hospitality businesses.',           href: '/hospitality',  accent: 'var(--color-hps-gold-rich)' },
                 { label: 'Accessibility',     desc: 'WCAG audit, Section 508 compliance, remediation, documentation, and ongoing monitoring.',             href: '/accessibility', accent: 'var(--color-hps-green)' },
-                { label: 'Media & Creator',   desc: 'FreeBeatsMUSIC, branded file delivery, production workflow tools, and creator distribution systems.', href: '/media',        accent: 'var(--color-hps-gold)' },
-                { label: 'AI & Automation',   desc: 'Claude and n8n-powered workflow automation that handles repeatable work inside real operations.',      href: '/ai-systems',   accent: 'var(--color-hps-teal)' },
+                { label: 'Media & Creator',   desc: 'FreeBeatsMUSIC, cinematic production workflows, creator launch systems, and branded file distribution.',    href: '/media',        accent: 'var(--color-hps-gold)' },
+                { label: 'AI & Automation',   desc: 'Claude and n8n-powered automation for creative workflows, content production, and operational intelligence.', href: '/ai-systems',   accent: 'var(--color-hps-teal)' },
               ].map((item, i) => (
                 <Link
                   key={item.href + item.label}
@@ -332,17 +333,17 @@ export default function HomePage() {
                 {[
                   {
                     label: 'Full-spectrum in-house',
-                    desc: 'No vendor handoffs, no translation loss. Every capability is in-house, operating under one ongoing production relationship.',
+                    desc: 'No vendor handoffs, no translation loss. Whether the project is a single sign or a complete ecosystem, every capability is in-house under one ongoing production relationship.',
                     accent: 'var(--color-hps-green)',
                   },
                   {
                     label: 'Operational, not transactional',
-                    desc: "Engagements are long-term operational partnerships. The work doesn't end at launch — it extends into monitoring, updating, and growing.",
+                    desc: "Whether it starts with a single sign or a full platform build, engagements grow into long-term partnerships. The work doesn't end at launch.",
                     accent: 'var(--color-hps-teal-dark)',
                   },
                   {
                     label: 'Physical and digital, one team',
-                    desc: 'UV-printed signage and QR-connected surfaces share the same production team as the digital platforms that power them.',
+                    desc: 'UV-printed signage, cinematic campaign assets, and QR-connected surfaces share the same production team as the digital platforms that power them.',
                     accent: 'var(--color-hps-coral-warm)',
                   },
                 ].map((item, i) => (
@@ -418,7 +419,7 @@ export default function HomePage() {
                 },
                 {
                   eyebrow: 'AI & Workflow Automation',
-                  label: 'Claude and n8n-based automation for content, data enrichment, and operational workflows.',
+                  label: 'Claude and n8n-based automation for creative workflows, content production, and operational intelligence.',
                   href: '/ai-systems',
                   accent: 'var(--color-hps-teal)',
                 },
@@ -430,7 +431,7 @@ export default function HomePage() {
                 },
                 {
                   eyebrow: 'Photography & Media',
-                  label: 'Commercial photography, video production, and creator content infrastructure.',
+                  label: 'Commercial photography, cinematic video production, motion storytelling, and creator content infrastructure.',
                   href: '/media',
                   accent: 'var(--color-hps-gold)',
                 },
@@ -971,7 +972,7 @@ export default function HomePage() {
                   { label: 'We build what we design.',    desc: 'No design-to-developer handoff. The same team takes a project from concept to deployment.',             accent: 'var(--color-hps-green)' },
                   { label: 'We monitor what we host.',    desc: 'Hosting clients get uptime monitoring, SSL management, and outage alerts at no additional cost.',        accent: 'var(--color-hps-teal-dark)' },
                   { label: 'We update what we print.',    desc: 'Dynamic QR codes let us change the destination of a printed surface without a reprint order.',           accent: 'var(--color-hps-coral-warm)' },
-                  { label: 'We support what we launch.',  desc: 'Post-launch support is part of every engagement — not a separate contract, not a per-ticket billing.',  accent: 'var(--color-hps-gold-rich)' },
+                  { label: 'We support what we launch.',  desc: 'Post-launch support is part of every engagement. Not a separate contract, not a per-ticket billing.',  accent: 'var(--color-hps-gold-rich)' },
                 ].map((item, i) => (
                   <div
                     key={item.label}
@@ -1026,7 +1027,7 @@ export default function HomePage() {
                 <div className="w-5 h-px mb-4" style={{ background: 'rgba(244,234,212,0.50)' }} aria-hidden="true" />
                 <p className="font-display mb-3" style={{ fontSize: '1.25rem', color: 'var(--color-hps-cream)', lineHeight: 1.2 }}>Free Consultation</p>
                 <p className="font-body text-sm leading-relaxed mb-5" style={{ color: 'rgba(244,234,212,0.80)' }}>
-                  Book 30 minutes. No pitch deck. Just a direct conversation about your operation and what the ecosystem can do for it.
+                  Let's talk about your business, your ideas, and how we can help bring everything together.
                 </p>
                 <span className="font-mono uppercase" style={{ fontSize: '0.6rem', letterSpacing: '0.18em', color: 'var(--color-hps-gold-light)' }}>Start the conversation →</span>
               </Link>
@@ -1042,7 +1043,7 @@ export default function HomePage() {
                 <div className="w-5 h-px mb-4" style={{ background: 'var(--color-hps-green)' }} aria-hidden="true" />
                 <p className="font-display mb-3" style={{ fontSize: '1.25rem', color: 'var(--color-hps-ink)', lineHeight: 1.2 }}>Explore the Ecosystem</p>
                 <p className="font-body text-sm leading-relaxed mb-5" style={{ color: 'var(--color-hps-smoke)' }}>
-                  See how every platform, service, and production capability connects — and how it maps to your operation.
+                  See how every platform, service, and capability connects, whether you run a restaurant, a golf course, a local shop, or a growing studio.
                 </p>
                 <span className="font-mono uppercase" style={{ fontSize: '0.6rem', letterSpacing: '0.18em', color: 'var(--color-hps-green)' }}>Full ecosystem →</span>
               </Link>
@@ -1097,7 +1098,7 @@ export default function HomePage() {
             className="font-body leading-relaxed mb-8 max-w-xl mx-auto"
             style={{ fontSize: '1rem', color: 'rgba(244,234,212,0.65)' }}
           >
-            A 30-minute consultation with no pitch deck — just a direct conversation about your operation.
+            A 30-minute consultation, no pitch. Just a direct conversation about your operation.
           </p>
           <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
             <Link

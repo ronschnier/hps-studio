@@ -19,7 +19,12 @@ function clean(string $key): string {
 // Required fields
 $name  = clean('name');
 $email = clean('email');
+
+// Accept either 'goals' or 'message' — whichever the form sends
 $goals = clean('goals');
+if ($goals === '') {
+    $goals = clean('message');
+}
 
 if ($name === '' || $email === '' || $goals === '') {
     http_response_code(400);
@@ -67,12 +72,12 @@ $body .= str_repeat('-', 48) . "\nSubmitted: " . date('Y-m-d H:i:s T');
 
 // Postmark API payload
 $payload = json_encode([
-    'From'     => 'hello@happypathstudios.com',
-    'To'       => 'ron@happypathstudios.com',
-    'Cc'       => 'deb@happypathstudios.com',
-    'ReplyTo'  => $email,
-    'Subject'  => 'New HPS Free Consultation Request — ' . $name,
-    'TextBody' => $body,
+    'From'          => 'Happy Path Studios <hello@mail.happypathstudios.com>', // must be a verified Sender Signature in Postmark
+    'To'            => 'ron@happypathstudios.com',
+    'Cc'            => 'deb@happypathstudios.com',
+    'ReplyTo'       => $email,
+    'Subject'       => 'New HPS Free Consultation Request - ' . $name,
+    'TextBody'      => $body,
     'MessageStream' => 'outbound',
 ]);
 
@@ -84,14 +89,22 @@ curl_setopt_array($ch, [
     CURLOPT_HTTPHEADER     => [
         'Accept: application/json',
         'Content-Type: application/json',
-        'X-Postmark-Server-Token: POSTMARK_SERVER_TOKEN_HERE',
+        'X-Postmark-Server-Token: 9b5d993e-d6fe-49a8-9552-ee3705c38bd0',
     ],
     CURLOPT_TIMEOUT        => 10,
 ]);
 
 $response = curl_exec($ch);
 $httpCode = curl_getinfo($ch, CURLINFO_HTTP_CODE);
+$curlError = curl_error($ch);
 curl_close($ch);
+
+// Debug logging — remove once delivery is confirmed stable
+error_log('[send-consultation] HTTP ' . $httpCode);
+error_log('[send-consultation] Response: ' . $response);
+if ($curlError !== '') {
+    error_log('[send-consultation] cURL error: ' . $curlError);
+}
 
 if ($httpCode !== 200) {
     http_response_code(500);

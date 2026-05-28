@@ -58,7 +58,7 @@ const interests = [
   {
     id: 'general',
     label: 'General Consultation',
-    desc: 'Not sure yet — explore the ecosystem, discuss possibilities, and define what you need.',
+    desc: 'Not sure yet — explore the ecosystem, discuss possibilities, and define what you need. Projects of any size welcome.',
     accent: 'var(--color-hps-ink)',
     accentHex: '#0c1420',
   },
@@ -364,7 +364,7 @@ export default function ContactPage() {
                     What are you interested in?
                   </h2>
                   <p className="font-body mb-8" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)' }}>
-                    Select the area that best describes your needs. You can cover multiple topics in the consultation itself.
+                    Select the area that best describes your needs. Starting something small is fine — most projects begin with one question and grow from there.
                   </p>
 
                   <div className="grid grid-cols-1 sm:grid-cols-2 gap-3" role="group" aria-label="Select your area of interest">

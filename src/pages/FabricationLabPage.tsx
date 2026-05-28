@@ -123,7 +123,7 @@ const categories = [
     eyebrow: 'QR Surfaces · Connected Plaques · Sponsor Systems',
     accent: 'var(--color-hps-green)',
     accentHex: '#478c5c',
-    summary: 'Physical production with a live digital backbone. Every fabricated surface can carry a dynamic QR code — managed, tracked, and updated through HPS QR Code without touching the physical piece.',
+    summary: 'Physical production with a live digital backbone. Fabricated surfaces carry dynamic QR codes, campaign visuals, and cinematic brand assets — all managed and updated without touching the physical piece.',
     systems: [
       {
         name: 'Dimensional Plaques & Signage',
@@ -156,7 +156,7 @@ const categories = [
 // ── Production Pipeline ───────────────────────────────────────────────────────
 
 const pipeline = [
-  { n: '01', label: 'Design & Art Prep',   desc: 'Brand alignment, material-appropriate file prep, color profiling, and pre-production verification before any machine runs.' },
+  { n: '01', label: 'Design & Art Prep',   desc: 'Brand alignment, campaign asset prep, material-appropriate file prep, color profiling, and pre-production verification before any machine runs.' },
   { n: '02', label: 'Material Selection',  desc: 'Substrate and consumable selection matched to application, finish spec, indoor vs outdoor requirement, and production method.' },
   { n: '03', label: 'Production',          desc: 'In-house fabrication on the appropriate system. No vendor outsourcing. Timeline is ours to control.' },
   { n: '04', label: 'QR Integration',      desc: 'For connected surfaces: QR codes configured, tested against live destination, and scan-verified before leaving the lab.' },
@@ -300,7 +300,7 @@ export default function FabricationLabPage() {
               className="font-body leading-relaxed"
               style={{ fontSize: '1rem', color: 'var(--color-hps-smoke)', maxWidth: '38rem', opacity: 0.85 }}
             >
-              UV printing, laser systems, garment production, 3D printing, and QR-connected surfaces — designed and produced in Leesburg, Florida. No vendor handoffs, no outsourced production, no translation loss between the digital file and the finished piece.
+              UV printing, laser systems, garment production, 3D printing, campaign visuals, and QR-connected surfaces — designed and produced in Leesburg, Florida. No vendor handoffs, no outsourced production, no translation loss between the digital file and the finished piece.
             </p>
           </div>
         </div>

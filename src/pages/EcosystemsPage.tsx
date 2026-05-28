@@ -51,7 +51,7 @@ const clusters = [
   {
     eyebrow: 'Analytics & Observability',
     label: 'Behavioral data, SEO health, and uptime infrastructure',
-    desc: 'Behavioral analytics, technical SEO health, and uptime monitoring — the operational layer that tells you what is working and what is failing before customers notice.',
+    desc: 'Behavioral analytics, technical SEO health, and uptime monitoring. The operational layer that tells you what is working and what is failing before customers notice.',
     accent: 'var(--color-hps-gold-rich)',
     links: [
       { label: 'HPS EngageTracker',  href: '/platforms/hps-engagetracker', rel: 'Session, heatmap, and funnel analytics' },
@@ -155,7 +155,7 @@ const connections = [
     to: 'Creator Hub + Hosting',
     accent: 'var(--color-hps-gold)',
     headline: 'Content production through audience delivery, one workflow.',
-    body: 'Assets created in HPS Media Studio. Delivered through Transfer. Hosted on HPS infrastructure. Audience reached through Push. Analytics consolidated in EngageTracker. One operational pipeline — no vendor chain, no translation loss.',
+    body: 'Assets created in HPS Media Studio. Delivered through Transfer. Hosted on HPS infrastructure. Audience reached through Push. Analytics consolidated in EngageTracker. One operational pipeline, no vendor chain, no translation loss.',
     links: [{ label: 'HPS Media', href: '/media' }, { label: 'Hosting', href: '/hosting' }],
   },
   {
@@ -163,7 +163,7 @@ const connections = [
     to: 'Operational Workflow',
     accent: 'var(--color-hps-teal)',
     headline: 'Automation at the workflow level, not the feature level.',
-    body: 'Claude and n8n-based workflows operate behind content systems, reporting pipelines, and client communication flows. AI here is connective tissue between systems — not a product feature bolted onto the front of a page.',
+    body: 'Claude and n8n-based workflows operate behind content systems, reporting pipelines, and client communication flows. AI here is connective tissue between systems, not a product feature bolted onto the front of a page.',
     links: [{ label: 'AI Systems', href: '/ai-systems' }, { label: 'Platforms', href: '/platforms' }],
   },
 ]
@@ -219,7 +219,7 @@ const launchPathways = [
   {
     label: 'Course & Recreation Operations',
     accent: 'var(--color-hps-green)',
-    desc: 'Signage, sponsor activation, QR infrastructure, clubhouse display, and guest engagement — connected and measurable.',
+    desc: 'Signage, sponsor activation, QR infrastructure, clubhouse display, and guest engagement. Connected and measurable.',
     ctAs: [
       { label: 'HPS Golf Ecosystem',         href: '/golf' },
       { label: 'Fabrication Lab',            href: '/fabrication' },
@@ -230,7 +230,7 @@ const launchPathways = [
   {
     label: 'Creator & Media Infrastructure',
     accent: 'var(--color-hps-gold)',
-    desc: 'Link management, file delivery, licensed audio, audience push, and cross-platform analytics — without platform dependency.',
+    desc: 'Link management, file delivery, licensed audio, audience push, and cross-platform analytics. No platform dependency.',
     ctAs: [
       { label: 'HPS Media',                  href: '/media' },
       { label: 'Platforms',                  href: '/platforms' },
@@ -241,7 +241,7 @@ const launchPathways = [
   {
     label: 'Compliance & Accessibility',
     accent: 'var(--color-hps-teal-dark)',
-    desc: 'WCAG audit, Section 508 testing, remediation, compliance documentation, and continuous monitoring — the full pipeline.',
+    desc: 'WCAG audit, Section 508 testing, remediation, compliance documentation, and continuous monitoring. The full pipeline.',
     ctAs: [
       { label: 'HPS Accessibility',          href: '/accessibility' },
       { label: 'Enterprise Pathway',         href: '/ecosystem/enterprise' },
@@ -294,7 +294,7 @@ const verticals = [
   {
     slug: 'local-business',
     name: 'Local Business',
-    desc: 'Review presence, QR systems, local SEO monitoring, and push channel for single-location operations.',
+    desc: 'Review presence, QR menus, local SEO monitoring, and push notifications — built for restaurants, shops, food trucks, and local businesses of any size.',
     accent: 'var(--color-hps-coral-warm)',
     tag: 'Visibility',
   },
@@ -319,7 +319,7 @@ export default function EcosystemsPage() {
       <PageHeader
         eyebrow="All Systems, One Studio"
         title="The HPS Ecosystem"
-        description="Digital infrastructure, physical fabrication, and connected surfaces produced and managed by the same team, from the same location."
+        description="Digital infrastructure, physical fabrication, and connected surfaces produced and managed by the same team, from the same location. From a first website to a full operational system — real tools for real businesses."
         accentColor="var(--color-hps-green)"
       />
 
@@ -388,7 +388,7 @@ export default function EcosystemsPage() {
                 Operational relationships.
               </h3>
               <p className="font-body text-hps-smoke leading-relaxed mt-3" style={{ fontSize: '0.9375rem' }}>
-                Digital infrastructure, physical fabrication, and connected surfaces are produced within the same operational relationship, by the same team. The physical and digital sides never separate, and nothing gets lost in translation.
+                Digital infrastructure, physical fabrication, and connected surfaces are produced within the same operational relationship, by the same team. The physical and digital sides never separate, and nothing gets lost in translation. Whether a business needs a single sign or a complete operational system, the relationship works the same way.
               </p>
             </div>
 
@@ -453,7 +453,7 @@ export default function EcosystemsPage() {
               className="font-body max-w-xl"
               style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', lineHeight: 1.65 }}
             >
-              Twenty platforms organized by operational function. Each cluster solves a specific layer of the problem — and they're built to be combined.
+              Twenty platforms organized by operational function. Each cluster solves a specific layer of the problem, and they're built to be combined.
             </p>
           </div>
 
@@ -761,7 +761,7 @@ export default function EcosystemsPage() {
               Operational flow pipelines.
             </h2>
             <p className="font-body max-w-xl" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', lineHeight: 1.65 }}>
-              Every HPS service category has a defined production pathway — from first contact to recurring operational continuity. These are the flows, not the features.
+              Every HPS service category has a defined production pathway, from first contact to recurring operational continuity. These are the flows, not the features.
             </p>
           </div>
 
@@ -967,7 +967,7 @@ export default function EcosystemsPage() {
               From first consultation to running infrastructure.
             </h2>
             <p className="font-body max-w-xl" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', lineHeight: 1.65 }}>
-              Every HPS engagement is designed with a long-term operational arc in mind — not just delivery, but continuity. Here is how that typically develops.
+              Every HPS engagement is designed with a long-term operational arc in mind. Not just delivery, but continuity. Here is how that typically develops.
             </p>
           </div>
 
@@ -998,7 +998,7 @@ export default function EcosystemsPage() {
                 n: '04',
                 label: 'Operational Continuity',
                 timeframe: 'Ongoing',
-                desc: "After six months, it isn't a set of tools — it's the operational baseline. New capabilities extend naturally from what is already running.",
+                desc: "After six months, it isn't a set of tools anymore. It's the operational baseline, and new capabilities extend naturally from what is already running.",
                 accent: 'var(--color-hps-ink)',
               },
             ].map((phase, i) => (

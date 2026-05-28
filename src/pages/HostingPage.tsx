@@ -134,7 +134,7 @@ export default function HostingPage() {
       <PageHeader
         eyebrow="Managed Web Hosting"
         title="HPS Hosting"
-        description="Four purpose-built hosting products — each optimized for a specific business type, all managed, all connected to the HPS platform ecosystem."
+        description="Purpose-built hosting products for restaurants, local businesses, creators, and growing operations — each optimized for a specific business type, all managed, all connected to the HPS platform ecosystem. Some clients start simple and add more over time."
         accentColor="var(--color-hps-teal-dark)"
       />
 
@@ -209,7 +209,7 @@ export default function HostingPage() {
                 Built for businesses that run on their websites.
               </h2>
               <p className="font-body leading-relaxed mb-5" style={{ fontSize: '1rem', color: 'var(--color-hps-smoke)' }}>
-                Generic hosting is built for volume. HPS Hosting is built for continuity. Your website isn't a brochure — it's an operational layer: booking systems run through it, QR codes point to it, clients authenticate through it, and sponsorship campaigns land on it. It needs to stay up, stay fast, and stay connected.
+                Generic hosting is built for volume. HPS Hosting is built for continuity. Whether it's a food truck's first website or a golf course running sponsor campaigns, the operational standard is the same — your site is an active layer of your business, not a brochure. It needs to stay up, stay fast, and stay connected.
               </p>
               <p className="font-body leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', opacity: 0.9 }}>
                 Every HPS hosting plan is pre-configured, actively monitored, and connected to the platforms your operation depends on. When something needs attention, we handle it — you don't open a ticket and wait three business days.

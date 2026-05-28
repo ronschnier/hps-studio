@@ -31,6 +31,9 @@ export default function HospitalityQRPage() {
             <h2 className="font-display" style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)', color: 'var(--color-hps-ink)', lineHeight: 1.1 }}>
               Two connected platforms. One operational surface.
             </h2>
+            <p className="font-body mt-3 max-w-xl" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', lineHeight: 1.65 }}>
+              For restaurants, food trucks, breweries, and hospitality venues of any size. Simple to start, easy to manage, and built to keep running without your attention.
+            </p>
           </div>
           <div className="flex flex-col gap-8">
             {[
@@ -39,7 +42,7 @@ export default function HospitalityQRPage() {
                 href: '/platforms/hps-qr-menu',
                 tag: 'Restaurants & Food Trucks',
                 accent: 'var(--color-hps-coral-warm)',
-                desc: 'Interactive, mobile-first QR menus for restaurants, breweries, food trucks, and hospitality venues. Update your menu in real time — no reprinting, no app required for guests. Includes scan analytics, seasonal menu switching, 86 mode for instant item removal, and full custom branding.',
+                desc: 'Interactive, mobile-first QR menus for restaurants, breweries, food trucks, and hospitality venues. Update your menu in real time, no reprinting, no app required for guests. Includes scan analytics, seasonal menu switching, 86 mode for instant item removal, and full custom branding.',
                 features: [
                   { label: 'Real-time menu updates', note: 'Change items, prices, and availability from any device' },
                   { label: 'Mobile-optimized display', note: 'Fast load, clean layout, no app install required' },
@@ -122,7 +125,7 @@ export default function HospitalityQRPage() {
                 Items go 86 mid-service. Prices adjust with supply costs. Seasonal specials appear and disappear. A new item needs a photo before it's ready to show. A brewery's tap list changes every two weeks. A food truck runs different items at different venues.
               </p>
               <p className="font-body leading-relaxed mb-4" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', opacity: 0.9 }}>
-                HPS QR Menu is built for this pace. Your team makes changes from any device — phone, tablet, or laptop — and guests at the table see the updated menu immediately. The QR code on the table tent stays exactly the same. You never reprint to fix a price.
+                HPS QR Menu is built for this pace. Your team makes changes from any device, phone, tablet, or laptop, and guests at the table see the updated menu immediately. The QR code on the table tent stays exactly the same. You never reprint to fix a price.
               </p>
               <p className="font-body leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', opacity: 0.9 }}>
                 The operational rhythm is: change the dashboard, not the printed materials. That separation is what keeps physical hospitality surfaces in service for years instead of months.
@@ -130,10 +133,10 @@ export default function HospitalityQRPage() {
             </div>
             <div data-reveal data-reveal-delay="80" className="flex flex-col gap-4">
               {[
-                { label: 'Item availability changes', time: 'Real-time', desc: 'Mark items unavailable instantly. Guests see a greyed-out item — no awkward "we\'re out of that" conversation.', accent: 'var(--color-hps-coral-warm)' },
+                { label: 'Item availability changes', time: 'Real-time', desc: 'Mark items unavailable instantly. Guests see a greyed-out item, no awkward "we\'re out of that" conversation.', accent: 'var(--color-hps-coral-warm)' },
                 { label: 'Price and menu updates', time: 'Immediate', desc: 'Adjust prices, rename items, or swap descriptions from any browser. No file uploads, no reprints.', accent: 'var(--color-hps-gold-rich)' },
                 { label: 'Seasonal menu rotation', time: 'Scheduled', desc: 'Set seasonal or time-based menus to activate and deactivate automatically. Happy hour, brunch, and dinner menus on a schedule.', accent: 'var(--color-hps-teal-dark)' },
-                { label: 'Scan analytics review', time: 'Ongoing', desc: 'Monthly scan data shows which surfaces are getting traffic and which aren\'t — informs placement and table tent positioning.', accent: 'var(--color-hps-green)' },
+                { label: 'Scan analytics review', time: 'Ongoing', desc: 'Monthly scan data shows which surfaces are getting traffic and which aren\'t. Informs placement and table tent positioning over time.', accent: 'var(--color-hps-green)' },
               ].map(item => (
                 <div
                   key={item.label}
@@ -263,7 +266,7 @@ export default function HospitalityQRPage() {
               className="font-body max-w-xl"
               style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)', lineHeight: 1.65 }}
             >
-              The QR menu is the guest's first contact point. What happens after — whether they leave a review, receive your next promotion, and come back — depends on what's connected to it.
+              The QR menu is the guest's first contact point. What happens after, whether they leave a review, receive your next promotion, and come back, depends on what's connected to it.
             </p>
           </div>
           <div className="flex flex-col gap-0">

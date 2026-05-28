@@ -484,6 +484,8 @@ export const platforms: Platform[] = [
   // ── Free Tools ───────────────────────────────────────────────────
   {
     slug: 'hps-ecommerce-tools',
+    liveUrl: 'https://happypathstudios.com/ecommerce-tools/',
+    liveLabel: 'Start Free',
     stackGroup: 'free',
     name: 'HPS Ecommerce Tools',
     tagline: 'Free utilities for online store operators.',
@@ -510,6 +512,8 @@ export const platforms: Platform[] = [
   },
   {
     slug: 'hps-seo-tools',
+    liveUrl: 'https://happypathstudios.com/seo-tools/',
+    liveLabel: 'Start Free',
     stackGroup: 'free',
     name: 'HPS SEO Tools',
     tagline: 'Free SEO utilities for small business owners.',
