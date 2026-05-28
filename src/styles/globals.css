@@ -159,29 +159,26 @@ h1, h2, h3, h4, h5 {
 
 /* ── Navigation ──────────────────────────────────────── */
 
-/* Explicit glass baseline — applied directly to the nav wrapper for production reliability */
+/* Dark cinematic glass — transparent over hero, no cream tones */
+.nav-base,
 .hps-top-nav {
-  background: rgba(255, 248, 231, 0.72);
+  background: rgba(7, 10, 18, 0.18);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(207, 160, 71, 0.22);
-}
-
-/* Header: warm glass baseline always visible; nav-active strengthens on scroll/interior */
-.nav-base {
-  background: rgba(255, 248, 231, 0.72);
-  backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(207, 160, 71, 0.22);
-  transition: background 0.4s, border-color 0.4s, box-shadow 0.4s,
-              backdrop-filter 0.4s, -webkit-backdrop-filter 0.4s;
+  border-bottom: 1px solid rgba(255, 205, 92, 0.10);
+  transition:
+    background .4s,
+    border-color .4s,
+    box-shadow .4s,
+    backdrop-filter .4s,
+    -webkit-backdrop-filter .4s;
 }
 .nav-active {
-  background: rgba(248, 242, 232, 0.92);
+  background: rgba(7, 10, 18, 0.34);
   backdrop-filter: blur(8px);
   -webkit-backdrop-filter: blur(8px);
-  border-bottom-color: rgba(200, 180, 154, 0.35);
-  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+  border-bottom-color: rgba(255, 205, 92, 0.16);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
 }
 
 /* Logo: always full color — subtle shadow helps white paths read on cream */
