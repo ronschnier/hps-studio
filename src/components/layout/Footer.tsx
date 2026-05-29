@@ -25,6 +25,7 @@ const footerGroups = [
       { label: 'HPS Media Studio',     href: '/platforms/hps-media-studio' },
       { label: 'HPS Transfer',         href: '/platforms/hps-transfer' },
       { label: 'Photography & Video',  href: '/services/photography-videography' },
+      { label: 'HPS Shalom',           href: '/ecosystems/hps-shalom' },
     ],
   },
   {

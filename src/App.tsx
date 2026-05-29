@@ -53,6 +53,8 @@ const MediaPage          = lazy(() => import('./pages/MediaPage'))
 const ClientPortalPage   = lazy(() => import('./pages/ClientPortalPage'))
 const SupportPage        = lazy(() => import('./pages/SupportPage'))
 const ThankYouPage       = lazy(() => import('./pages/ThankYouPage'))
+const HPSShalomPage      = lazy(() => import('./pages/HPSShalomPage'))
+const NotFoundPage       = lazy(() => import('./pages/NotFoundPage'))
 
 function ScrollToTop() {
   const { pathname } = useLocation()
@@ -88,9 +90,11 @@ function PageRoutes() {
           <Route path="/services/identity-communications" element={<IdentityCommunicationsPage />} />
           <Route path="/services/:slug" element={<ServiceDetailPage />} />
           <Route path="/hosting/:slug" element={<HostingDetailPage />} />
+          <Route path="/ecosystems/hps-shalom" element={<HPSShalomPage />} />
           <Route path="/about" element={<AboutPage />} />
           <Route path="/contact" element={<ContactPage />} />
           <Route path="/thank-you" element={<ThankYouPage />} />
+          <Route path="*" element={<NotFoundPage />} />
         </Routes>
       </div>
     </Suspense>

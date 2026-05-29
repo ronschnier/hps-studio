@@ -65,6 +65,23 @@ const ecosystems = [
     tone: 'Physical production meets digital infrastructure.',
   },
   {
+    id: 'editorial',
+    eyebrow: 'Editorial & Experience',
+    title: 'Editorial & Experience Platforms',
+    accent: '#b8882a',
+    accentVar: 'var(--color-hps-gold-rich)',
+    href: '/ecosystems/hps-shalom',
+    services: [
+      { label: 'Editorial Platforms',           href: '/ecosystems/hps-shalom' },
+      { label: 'Storytelling Platforms',        href: '/ecosystems/hps-shalom' },
+      { label: 'Cultural Platforms',            href: '/ecosystems/hps-shalom' },
+      { label: 'Family Experience Platforms',   href: '/ecosystems/hps-shalom' },
+      { label: 'Community Platforms',           href: '/ecosystems/hps-shalom' },
+      { label: 'Content Ecosystems',            href: '/ecosystems/hps-shalom' },
+    ] as ServiceItem[],
+    tone: 'Immersive content ecosystems built for cultural depth, family engagement, and generational continuity.',
+  },
+  {
     id: 'connected',
     eyebrow: 'Connected Experiences',
     title: 'Ecosystems & Connected Surfaces',

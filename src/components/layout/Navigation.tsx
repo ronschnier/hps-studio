@@ -17,6 +17,7 @@ const moreNav = [
   { label: 'HPS Golf',          href: '/golf' },
   { label: 'Accessibility',     href: '/accessibility' },
   { label: 'AI Systems',        href: '/ai-systems' },
+  { label: 'HPS Shalom',        href: '/ecosystems/hps-shalom' },
 ]
 
 const freeToolsNav = [
@@ -41,6 +42,7 @@ const allMobileNav = [
   { label: 'HPS Golf',                href: '/golf' },
   { label: 'Accessibility',           href: '/accessibility' },
   { label: 'AI Systems',              href: '/ai-systems' },
+  { label: 'HPS Shalom',              href: '/ecosystems/hps-shalom' },
   { label: 'HPS SEO Tools',           href: '/platforms/hps-seo-tools' },
   { label: 'HPS Ecommerce Tools',     href: '/platforms/hps-ecommerce-tools' },
   { label: 'Client Portal',           href: '/client-portal' },

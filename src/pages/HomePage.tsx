@@ -994,10 +994,127 @@ export default function HomePage() {
 
         <EnterpriseOperationalTrust />
 
-        <SectionBridge from="var(--color-hps-parchment)" to="var(--color-hps-cream)" accent="var(--color-hps-green)" />
+        <SectionBridge from="var(--color-hps-parchment)" to="var(--color-hps-cream)" />
+
+        {/* ── Editorial & Experience Ecosystems ───────────────────────── */}
+        <section className="py-20 lg:py-28" style={{ background: 'var(--color-hps-cream)' }}>
+          <div className="max-w-7xl mx-auto px-6 lg:px-10">
+            <div data-reveal className="mb-12 max-w-2xl">
+              <p
+                className="font-mono uppercase mb-3"
+                style={{ fontSize: '0.65rem', letterSpacing: '0.2em', color: 'var(--color-hps-gold-rich)' }}
+              >
+                Editorial & experience ecosystems
+              </p>
+              <h2
+                className="font-display text-hps-ink leading-tight mb-4"
+                style={{ fontSize: 'clamp(1.5rem, 3vw, 2.25rem)' }}
+              >
+                Beyond operational platforms.
+              </h2>
+              <p
+                className="font-body leading-relaxed"
+                style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)' }}
+              >
+                Beyond software and operational platforms, Happy Path Studios creates immersive storytelling, cultural, educational, family-focused, and content-driven experiences designed for long-term engagement and meaningful discovery.
+              </p>
+            </div>
+
+            {/* HPS Shalom featured card */}
+            <div
+              data-reveal
+              data-reveal-delay="80"
+              className="grid grid-cols-1 lg:grid-cols-[1fr_360px] gap-8 rounded-sm p-8 lg:p-12"
+              style={{ background: 'var(--color-hps-parchment)', border: '1px solid rgba(200,180,154,0.40)', borderLeft: '4px solid var(--color-hps-gold-rich)' }}
+            >
+              <div>
+                <p
+                  className="font-mono uppercase mb-3"
+                  style={{ fontSize: '0.6rem', letterSpacing: '0.2em', color: 'var(--color-hps-gold-rich)' }}
+                >
+                  Flagship editorial platform
+                </p>
+                <h3
+                  className="font-display mb-4"
+                  style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2.25rem)', color: 'var(--color-hps-ink)', lineHeight: 1.08 }}
+                >
+                  HPS Shalom
+                </h3>
+                <p
+                  className="font-body leading-relaxed mb-5"
+                  style={{ fontSize: '1rem', color: 'var(--color-hps-smoke)', maxWidth: '38rem' }}
+                >
+                  A living cultural storytelling platform centered around Jewish holidays, traditions, recipes, family experiences, educational discovery, seasonal engagement, and future commerce experiences.
+                </p>
+                <div className="flex flex-wrap gap-2 mb-6">
+                  {['Holiday Experiences', 'Stories & Traditions', 'Family Activities', 'Recipes & Food Culture', 'Educational Discovery', 'Seasonal Engagement', 'Future Family OS'].map(tag => (
+                    <span
+                      key={tag}
+                      className="font-mono"
+                      style={{
+                        fontSize: '0.55rem',
+                        letterSpacing: '0.12em',
+                        padding: '0.2rem 0.65rem',
+                        background: 'rgba(184,136,42,0.10)',
+                        color: 'var(--color-hps-gold-rich)',
+                        borderRadius: '2px',
+                      }}
+                    >
+                      {tag}
+                    </span>
+                  ))}
+                </div>
+                <div className="flex flex-wrap gap-3">
+                  <Link
+                    to="/ecosystems/hps-shalom"
+                    className="inline-flex items-center font-body font-medium text-sm rounded-sm transition-all duration-200"
+                    style={{ padding: '0.65rem 1.4rem', background: 'var(--color-hps-gold-rich)', color: '#ffffff', textDecoration: 'none' }}
+                    onMouseEnter={e => (e.currentTarget.style.opacity = '0.88')}
+                    onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+                  >
+                    Explore HPS Shalom →
+                  </Link>
+                  <a
+                    href="https://hpsshalom.com"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="inline-flex items-center font-body font-medium text-sm rounded-sm transition-all duration-200"
+                    style={{ padding: '0.65rem 1.4rem', background: 'transparent', color: 'var(--color-hps-gold-rich)', border: '1px solid rgba(184,136,42,0.35)', textDecoration: 'none' }}
+                    onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--color-hps-gold-rich)'; e.currentTarget.style.background = 'rgba(12,20,32,0.02)' }}
+                    onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(184,136,42,0.35)'; e.currentTarget.style.background = 'transparent' }}
+                  >
+                    hpsshalom.com ↗
+                  </a>
+                </div>
+              </div>
+              <div className="flex flex-col gap-3 self-center">
+                {[
+                  { label: 'Editorial Ecosystem', note: 'Cultural & experiential content platform' },
+                  { label: 'Seasonally Dynamic', note: 'Tied to the Hebrew calendar year' },
+                  { label: 'Family-First Architecture', note: 'Multi-generational engagement design' },
+                  { label: 'Commerce-Ready Foundation', note: 'Future Judaica & experience layer' },
+                ].map(item => (
+                  <div
+                    key={item.label}
+                    className="flex gap-3 p-3.5 rounded-sm"
+                    style={{ background: 'var(--color-hps-cream)', border: '1px solid rgba(200,180,154,0.40)' }}
+                  >
+                    <div className="w-1 shrink-0 self-stretch rounded-full" style={{ background: 'var(--color-hps-gold-rich)' }} aria-hidden="true" />
+                    <div>
+                      <p className="font-body font-medium" style={{ fontSize: '0.8125rem', color: 'var(--color-hps-ink)' }}>{item.label}</p>
+                      <p className="font-mono" style={{ fontSize: '0.56rem', letterSpacing: '0.08em', color: 'var(--color-hps-smoke)', opacity: 0.75 }}>{item.note}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
+        </section>
+
+        <SectionBridge from="var(--color-hps-cream)" to="var(--color-hps-parchment)" accent="var(--color-hps-gold-rich)" />
 
         {/* ── Contact Gateway ─────────────────────────────────────────── */}
-        <section className="py-20 lg:py-28" style={{ background: 'var(--color-hps-cream)' }}>
+        <section className="py-20 lg:py-28" style={{ background: 'var(--color-hps-parchment)' }}>
           <div className="max-w-7xl mx-auto px-6 lg:px-10">
             <div data-reveal className="mb-12 max-w-xl">
               <p
