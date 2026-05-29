@@ -1,0 +1,88 @@
+# ── Happy Path Studios — Apache configuration ─────────────────────────────────
+# Deployed with Vite SPA build. Safe for cPanel / LiteSpeed / Apache 2.4+.
+
+# ── Compression ───────────────────────────────────────────────────────────────
+
+<IfModule mod_brotli.c>
+  AddOutputFilterByType BROTLI_COMPRESS text/html
+  AddOutputFilterByType BROTLI_COMPRESS text/css
+  AddOutputFilterByType BROTLI_COMPRESS application/javascript
+  AddOutputFilterByType BROTLI_COMPRESS application/json
+  AddOutputFilterByType BROTLI_COMPRESS image/svg+xml
+  AddOutputFilterByType BROTLI_COMPRESS application/xml
+  AddOutputFilterByType BROTLI_COMPRESS text/xml
+  AddOutputFilterByType BROTLI_COMPRESS text/plain
+</IfModule>
+
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html
+  AddOutputFilterByType DEFLATE text/css
+  AddOutputFilterByType DEFLATE application/javascript
+  AddOutputFilterByType DEFLATE application/json
+  AddOutputFilterByType DEFLATE image/svg+xml
+  AddOutputFilterByType DEFLATE application/xml
+  AddOutputFilterByType DEFLATE text/xml
+  AddOutputFilterByType DEFLATE text/plain
+</IfModule>
+
+# ── Security headers ──────────────────────────────────────────────────────────
+
+<IfModule mod_headers.c>
+  # HSTS — only enable when HTTPS is confirmed working on www + non-www
+  Header always set Strict-Transport-Security "max-age=31536000; includeSubDomains; preload"
+
+  # Prevent MIME sniffing
+  Header always set X-Content-Type-Options "nosniff"
+
+  # Clickjacking protection
+  Header always set X-Frame-Options "SAMEORIGIN"
+</IfModule>
+
+# ── Cache control — static assets with hashed filenames ──────────────────────
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # HTML — no cache (React routes always fresh)
+  ExpiresByType text/html "access plus 0 seconds"
+
+  # Hashed CSS/JS — 1 year (Vite adds content hash to filenames)
+  ExpiresByType text/css "access plus 1 year"
+  ExpiresByType application/javascript "access plus 1 year"
+
+  # Fonts and images — 1 month
+  ExpiresByType image/svg+xml "access plus 1 month"
+  ExpiresByType image/png "access plus 1 month"
+  ExpiresByType image/jpeg "access plus 1 month"
+  ExpiresByType image/webp "access plus 1 month"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+</IfModule>
+
+# ── 404 error document ────────────────────────────────────────────────────────
+
+ErrorDocument 404 /404.html
+
+# ── React SPA routing ─────────────────────────────────────────────────────────
+# Serve index.html for all React routes.
+# Existing files and directories pass through unchanged.
+# Subdirectory apps (/seo-tools/, /ecommerce-tools/) are preserved.
+
+<IfModule mod_rewrite.c>
+  Options -MultiViews
+  RewriteEngine On
+  RewriteBase /
+
+  # Pass through actual files (CSS, JS, images, PHP, sitemap, robots, etc.)
+  RewriteCond %{REQUEST_FILENAME} -f [OR]
+  RewriteCond %{REQUEST_FILENAME} -d
+  RewriteRule ^ - [L]
+
+  # Preserve subdirectory apps — do not rewrite their routes
+  RewriteCond %{REQUEST_URI} ^/seo-tools/ [OR]
+  RewriteCond %{REQUEST_URI} ^/ecommerce-tools/
+  RewriteRule ^ - [L]
+
+  # All remaining routes → React app shell
+  RewriteRule ^ /index.html [QSA,L]
+</IfModule>

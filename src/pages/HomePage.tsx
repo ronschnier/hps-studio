@@ -15,7 +15,7 @@ export default function HomePage() {
       {/* ── Hero ───────────────────────────────────────────────────── */}
       <section
         aria-labelledby="hero-heading"
-        className="relative min-h-[90vh] flex items-center overflow-hidden"
+        className="relative min-h-[90vh] flex items-center overflow-hidden overflow-x-hidden"
         style={{ background: 'var(--color-hps-green-dark)' }}
       >
 
@@ -67,10 +67,7 @@ export default function HomePage() {
 
           {/* ── Left: text panel ─────────────────── */}
           <div
-            className="flex-1 max-w-3xl relative"
-            style={{
-              padding: '2rem 2.5rem',
-            }}
+            className="flex-1 max-w-3xl relative px-4 py-8 sm:px-8 lg:px-10"
           >
             {/* Gold left accent bar */}
             <div
@@ -82,13 +79,12 @@ export default function HomePage() {
             {/* Eyebrow */}
             <p
               data-reveal
-              className="font-mono uppercase mb-5"
+              className="font-mono uppercase mb-5 lg:whitespace-nowrap"
               style={{
                 fontSize: '0.68rem',
-                letterSpacing: '0.18em',
+                letterSpacing: '0.14em',
                 color: 'var(--color-hps-gold-light)',
                 textShadow: '0 1px 3px rgba(0,0,0,0.4)',
-                whiteSpace: 'nowrap',
               }}
             >
               Central Florida · Fabrication · Platforms · Compliance · AI
@@ -120,6 +116,7 @@ export default function HomePage() {
                 fontSize: '1.0625rem',
                 color: 'rgba(255,255,255,0.92)',
                 maxWidth: '42rem',
+                overflowWrap: 'break-word',
                 textShadow: '0 1px 3px rgba(0,0,0,0.25)',
               }}
             >
@@ -135,6 +132,7 @@ export default function HomePage() {
                 fontSize: '1.0625rem',
                 color: 'rgba(255,255,255,0.82)',
                 maxWidth: '42rem',
+                overflowWrap: 'break-word',
                 textShadow: '0 1px 3px rgba(0,0,0,0.22)',
               }}
             >
