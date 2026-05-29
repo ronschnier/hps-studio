@@ -36,6 +36,9 @@
 
   # Clickjacking protection
   Header always set X-Frame-Options "SAMEORIGIN"
+
+  # Referrer policy
+  Header always set Referrer-Policy "strict-origin-when-cross-origin"
 </IfModule>
 
 # ── Cache control — static assets with hashed filenames ──────────────────────

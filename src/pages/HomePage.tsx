@@ -1067,13 +1067,13 @@ export default function HomePage() {
                     352-290-7744
                   </a>
                   <a
-                    href="mailto:ron@happypathstudios.com"
+                    href="mailto:hello@happypathstudios.com"
                     className="font-body text-sm transition-colors duration-200"
                     style={{ color: 'var(--color-hps-smoke)', textDecoration: 'none' }}
                     onMouseEnter={e => (e.currentTarget.style.color = 'var(--color-hps-green)')}
                     onMouseLeave={e => (e.currentTarget.style.color = 'var(--color-hps-smoke)')}
                   >
-                    ron@happypathstudios.com
+                    hello@happypathstudios.com
                   </a>
                 </div>
               </div>

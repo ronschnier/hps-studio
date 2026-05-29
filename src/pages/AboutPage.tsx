@@ -69,7 +69,7 @@ const facts = [
   { label: 'Phone',        value: '352-290-7744', href: 'tel:+13522907744' },
   { label: 'Service area', value: 'Central Florida & beyond' },
   { label: 'Twitter / X',  value: '@happypathstudio', href: 'https://x.com/happypathstudio' },
-  { label: 'Email',        value: 'ron@happypathstudios.com', href: 'mailto:ron@happypathstudios.com' },
+  { label: 'Email',        value: 'hello@happypathstudios.com', href: 'mailto:hello@happypathstudios.com' },
 ]
 
 export default function AboutPage() {

@@ -7,7 +7,7 @@
 
     <!-- Primary SEO -->
     <title>Happy Path Studios | Leesburg, Florida</title>
-    <meta name="description" content="Happy Path Studios helps businesses bring ideas to life. Websites, branding, signage, fabrication, hosting, accessibility, and operational systems. Leesburg, Florida." />
+    <meta name="description" content="Happy Path Studios helps businesses bring ideas to life. Websites, branding, signage, hosting, fabrication, and accessibility. Leesburg, Florida." />
     <meta name="robots" content="index, follow" />
     <link rel="canonical" href="https://www.happypathstudios.com/" />
 
@@ -37,21 +37,40 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;0,700;1,400;1,500&family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet" />
 
-    <!-- Organization Schema -->
+    <!-- LocalBusiness + ProfessionalService Schema -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
-      "@type": "Organization",
+      "@type": ["LocalBusiness", "ProfessionalService"],
       "name": "Happy Path Studios",
       "url": "https://www.happypathstudios.com",
       "logo": "https://www.happypathstudios.com/images/hps-logo-straight.svg",
-      "description": "Fabrication lab, digital platforms, accessibility compliance, and AI infrastructure — one studio, one team, Leesburg, Florida.",
+      "image": "https://www.happypathstudios.com/images/stack-logo3shadow.png",
+      "description": "Fabrication lab, digital platforms, accessibility compliance, and AI workflow systems. One studio, one team, Leesburg, Florida.",
+      "telephone": "+1-352-290-7744",
+      "email": "hello@happypathstudios.com",
       "address": {
         "@type": "PostalAddress",
+        "streetAddress": "Leesburg",
         "addressLocality": "Leesburg",
         "addressRegion": "FL",
         "addressCountry": "US"
       },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 28.81,
+        "longitude": -81.88
+      },
+      "areaServed": [
+        {
+          "@type": "State",
+          "name": "Florida"
+        },
+        {
+          "@type": "Country",
+          "name": "United States"
+        }
+      ],
       "contactPoint": {
         "@type": "ContactPoint",
         "telephone": "+1-352-290-7744",
@@ -67,9 +86,28 @@
       ]
     }
     </script>
+
+    <!-- Chrome backdrop-filter stability fix: fully transparent elements do not always -->
+    <!-- create a compositing layer in Chrome. 0.01 alpha provides a painted surface    -->
+    <!-- without any visible change, ensuring blur renders reliably across browsers.     -->
+    <style type="text/css">
+      .nav-base,
+      .hps-top-nav {
+        background: rgba(255,255,255,0.01);
+        backdrop-filter: blur(8px);
+        -webkit-backdrop-filter: blur(8px);
+      }
+    </style>
   </head>
   <body>
     <div id="root"></div>
+    <!-- Crawler fallback: provides H1 and page content to non-JS crawlers -->
+    <noscript>
+      <h1>Happy Path Studios</h1>
+      <p>Happy Path Studios helps businesses bring ideas to life. Websites, branding, signage, hosting, fabrication, and accessibility. Based in Leesburg, Florida.</p>
+      <p>Services include web development, brand identity, UV printing, laser engraving, DTG apparel, embroidery, sublimation, QR systems, managed hosting, accessibility compliance, and AI workflow automation.</p>
+      <p>Call 352-290-7744 or visit <a href="https://www.happypathstudios.com/contact">our contact page</a>.</p>
+    </noscript>
     <script type="module" src="/src/main.tsx"></script>
   </body>
 </html>
