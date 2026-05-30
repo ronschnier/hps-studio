@@ -425,6 +425,34 @@ export default function HPSGolfPage() {
         accentColor="var(--color-hps-green)"
       />
 
+      {/* ── Hero CTAs ──────────────────────────────────────────────── */}
+      <div style={{ background: 'var(--color-hps-cream)', paddingTop: '2rem', paddingBottom: '2.5rem', borderBottom: '1px solid rgba(200,180,154,0.35)', marginTop: '-1px' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div className="flex flex-wrap gap-3">
+            <a
+              href="https://hpsgolf.app"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center font-body font-medium rounded-sm transition-all duration-200"
+              style={{ padding: '0.75rem 1.75rem', background: 'var(--color-hps-green)', color: '#ffffff', textDecoration: 'none', fontSize: '0.9375rem' }}
+              onMouseEnter={e => (e.currentTarget.style.opacity = '0.88')}
+              onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+            >
+              Visit HPS Golf ↗
+            </a>
+            <Link
+              to="/contact"
+              className="inline-flex items-center justify-center font-body font-medium rounded-sm transition-all duration-200"
+              style={{ padding: '0.75rem 1.75rem', background: 'transparent', color: 'var(--color-hps-green)', border: '1px solid rgba(71,140,92,0.35)', textDecoration: 'none', fontSize: '0.9375rem' }}
+              onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--color-hps-green)'; e.currentTarget.style.background = 'rgba(71,140,92,0.05)' }}
+              onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(71,140,92,0.35)'; e.currentTarget.style.background = 'transparent' }}
+            >
+              Schedule a Discovery Call
+            </Link>
+          </div>
+        </div>
+      </div>
+
       {/* ── Operational Pillars ────────────────────────────────────── */}
       <section className="py-16 lg:py-24" style={{ background: 'var(--color-hps-cream)' }}>
         <div className="max-w-7xl mx-auto px-6 lg:px-10">
@@ -1011,6 +1039,51 @@ export default function HPSGolfPage() {
 
       {/* ── Golf Deployment Reality ──────────────────────────────────── */}
       <HPSGolfDeploymentReality />
+
+      {/* ── Bottom Conversion Section ────────────────────────────────── */}
+      <section className="py-16 lg:py-24" style={{ background: 'var(--color-hps-parchment)', borderTop: '1px solid rgba(200,180,154,0.40)' }}>
+        <div className="max-w-7xl mx-auto px-6 lg:px-10">
+          <div
+            data-reveal
+            className="rounded-sm p-10 lg:p-14 flex flex-col lg:flex-row items-start lg:items-center justify-between gap-8"
+            style={{ background: 'var(--color-hps-cream)', border: '1px solid rgba(200,180,154,0.40)', borderLeft: '4px solid var(--color-hps-green)' }}
+          >
+            <div className="max-w-xl">
+              <p className="font-mono uppercase mb-3" style={{ fontSize: '0.58rem', letterSpacing: '0.2em', color: 'var(--color-hps-green)' }}>
+                Ready to see it in action
+              </p>
+              <h2 className="font-display mb-4" style={{ fontSize: 'clamp(1.5rem, 2.5vw, 2rem)', color: 'var(--color-hps-ink)', lineHeight: 1.1 }}>
+                Ready to See HPS Golf in Action?
+              </h2>
+              <p className="font-body leading-relaxed" style={{ fontSize: '0.9375rem', color: 'var(--color-hps-smoke)' }}>
+                HPS Golf combines tee sheets, golfer engagement, sponsor surfaces, QR experiences, analytics, operational intelligence, and club management into a single platform.
+              </p>
+            </div>
+            <div className="flex flex-wrap gap-3 shrink-0">
+              <a
+                href="https://hpsgolf.app"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-flex items-center justify-center font-body font-medium rounded-sm transition-all duration-200"
+                style={{ padding: '0.75rem 1.75rem', background: 'var(--color-hps-green)', color: '#ffffff', textDecoration: 'none', fontSize: '0.9375rem' }}
+                onMouseEnter={e => (e.currentTarget.style.opacity = '0.88')}
+                onMouseLeave={e => (e.currentTarget.style.opacity = '1')}
+              >
+                Visit HPS Golf ↗
+              </a>
+              <Link
+                to="/contact"
+                className="inline-flex items-center justify-center font-body font-medium rounded-sm transition-all duration-200"
+                style={{ padding: '0.75rem 1.75rem', background: 'transparent', color: 'var(--color-hps-green)', border: '1px solid rgba(71,140,92,0.35)', textDecoration: 'none', fontSize: '0.9375rem' }}
+                onMouseEnter={e => { e.currentTarget.style.borderColor = 'var(--color-hps-green)'; e.currentTarget.style.background = 'rgba(71,140,92,0.05)' }}
+                onMouseLeave={e => { e.currentTarget.style.borderColor = 'rgba(71,140,92,0.35)'; e.currentTarget.style.background = 'transparent' }}
+              >
+                Schedule a Discovery Call
+              </Link>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <CTABand
         headline="Build a Connected Golf Ecosystem."
